@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_ykYrQC0rEeiIwdMmK2XONw" name="GroupProject">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_zCMBkC0rEeiIwdMmK2XONw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EE100C0tEeiIwdMmK2XONw" name="GroupProject">
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZonD4C7QEei7v_wvYgzRhg" name="Location"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZrJagC7QEei7v_wvYgzRhg" name="Actor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZrMd0C7QEei7v_wvYgzRhg" name="Order"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EFIvwC0tEeiIwdMmK2XONw" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_EFJ94C0tEeiIwdMmK2XONw" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_EFKk8C0tEeiIwdMmK2XONw" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_EFLzEC0tEeiIwdMmK2XONw" name="String"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_EGnWcC0tEeiIwdMmK2XONw" name="Object"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_EGKDcC0tEeiIwdMmK2XONw" name="util">
+          <packagedElement xmi:type="uml:Class" xmi:id="_EGKqgC0tEeiIwdMmK2XONw" name="HashMap"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_S1Z6cC6_Eei7v_wvYgzRhg" name="Random"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_phYIcEvREei6wanWUMkAgg" name="bckup">
+      <packagedElement xmi:type="uml:Package" xmi:id="_piLZsEvREei6wanWUMkAgg" name="model">
+        <packagedElement xmi:type="uml:Class" xmi:id="_l0v6IEvbEei6wanWUMkAgg" name="Item"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_iMsmoEvhEei6wanWUMkAgg" name="Actor" visibility="public" isAbstract="true">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iMvC4EvhEei6wanWUMkAgg" name="UID" visibility="private" type="_EFLzEC0tEeiIwdMmK2XONw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iMw4EEvhEei6wanWUMkAgg" name="location" visibility="private" type="_ZonD4C7QEei7v_wvYgzRhg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_lumKo0viEei6wanWUMkAgg" name="location" type="_iNdboEvhEei6wanWUMkAgg" association="_lumKoEviEei6wanWUMkAgg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lumxsEviEei6wanWUMkAgg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lumxsUviEei6wanWUMkAgg" value="1"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iNEaEEvhEei6wanWUMkAgg" name="Actor" specification="_iMzUUEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    this.UID = Idenifier + LastUID;&#xD;
+    location = new Location(row, col);&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iNIrgEvhEei6wanWUMkAgg" name="getUID" specification="_iNG2UEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return UID;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iNLHwEvhEei6wanWUMkAgg" name="toString" specification="_iNJSkEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return &quot; [&quot; + UID + &quot;, mylocation=&quot; + location.getCol() + &quot;,&quot; + location.getRow() + &quot;]&quot;;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iNOLEEvhEei6wanWUMkAgg" name="setLocation" specification="_iNMV4EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    location.setLocation(loc);&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iNR1cEvhEei6wanWUMkAgg" name="getLocation" specification="_iNQAQEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return location;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iMzUUEvhEei6wanWUMkAgg" name="Actor" visibility="public" method="_iNEaEEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iM2-sEvhEei6wanWUMkAgg" name="Idenifier" type="_EFLzEC0tEeiIwdMmK2XONw"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNB90EvhEei6wanWUMkAgg" name="LastUID">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNDL8EvhEei6wanWUMkAgg" name="row">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNDzAEvhEei6wanWUMkAgg" name="col">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iNFBIEvhEei6wanWUMkAgg" name="tick" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNFoMEvhEei6wanWUMkAgg" name="warehouseActors" type="_EGKqgC0tEeiIwdMmK2XONw"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNGPQEvhEei6wanWUMkAgg" name="Orders" type="_EGKqgC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iNG2UEvhEei6wanWUMkAgg" name="getUID" visibility="public" method="_iNIrgEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNHdYEvhEei6wanWUMkAgg" type="_EFLzEC0tEeiIwdMmK2XONw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iNJSkEvhEei6wanWUMkAgg" name="toString" visibility="public" method="_iNLHwEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNKgsEvhEei6wanWUMkAgg" type="_EFLzEC0tEeiIwdMmK2XONw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iNMV4EvhEei6wanWUMkAgg" name="setLocation" visibility="public" method="_iNOLEEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNNkAEvhEei6wanWUMkAgg" name="loc" type="_ZonD4C7QEei7v_wvYgzRhg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iNQAQEvhEei6wanWUMkAgg" name="getLocation" visibility="public" method="_iNR1cEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNQnUEvhEei6wanWUMkAgg" type="_ZonD4C7QEei7v_wvYgzRhg" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_iNdboEvhEei6wanWUMkAgg" name="Location" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iNepwEvhEei6wanWUMkAgg" name="row" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iNge8EvhEei6wanWUMkAgg" name="col" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iNoawEvhEei6wanWUMkAgg" name="Location" specification="_iNiUIEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    this.row = row;&#xD;
+    this.col = col;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iNsFIEvhEei6wanWUMkAgg" name="toString" specification="_iNpo4EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return row + &quot;,&quot; + col;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iNwWkEvhEei6wanWUMkAgg" name="hashCode" specification="_iNt6UEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    final int prime = 31;&#xD;
+    int result = 1;&#xD;
+    result = prime * result + col;&#xD;
+    result = prime * result + row;&#xD;
+    return result;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iN12IEvhEei6wanWUMkAgg" name="equals" specification="_iNyLwEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    if (this == obj)&#xD;
+        return true;&#xD;
+    if (obj == null)&#xD;
+        return false;&#xD;
+    if (getClass() != obj.getClass())&#xD;
+        return false;&#xD;
+    Location other = (Location) obj;&#xD;
+    if (col != other.col)&#xD;
+        return false;&#xD;
+    if (row != other.row)&#xD;
+        return false;&#xD;
+    return true;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iN5ggEvhEei6wanWUMkAgg" name="setLocation" specification="_iN3rUEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    row = loc.getRow();&#xD;
+    col = loc.getCol();&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iN8j0EvhEei6wanWUMkAgg" name="getRow" specification="_iN6uoEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return row;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iN_nIEvhEei6wanWUMkAgg" name="getCol" specification="_iN-ZAEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return col;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iNiUIEvhEei6wanWUMkAgg" name="Location" visibility="public" method="_iNoawEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNl-gEvhEei6wanWUMkAgg" name="row">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNnzsEvhEei6wanWUMkAgg" name="col">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iNpo4EvhEei6wanWUMkAgg" name="toString" visibility="public" method="_iNsFIEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNreEEvhEei6wanWUMkAgg" type="_EFLzEC0tEeiIwdMmK2XONw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iNt6UEvhEei6wanWUMkAgg" name="hashCode" visibility="public" method="_iNwWkEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNvIcEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iNyLwEvhEei6wanWUMkAgg" name="equals" visibility="public" method="_iN12IEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iNzZ4EvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iN0oAEvhEei6wanWUMkAgg" name="obj" type="_EGnWcC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iN3rUEvhEei6wanWUMkAgg" name="setLocation" visibility="public" method="_iN5ggEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iN45cEvhEei6wanWUMkAgg" name="loc" type="_iNdboEvhEei6wanWUMkAgg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iN6uoEvhEei6wanWUMkAgg" name="getRow" visibility="public" method="_iN8j0EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iN78wEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iN-ZAEvhEei6wanWUMkAgg" name="getCol" visibility="public" method="_iN_nIEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iN_AEEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_iOHi8EvhEei6wanWUMkAgg" name="Order" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOIKAEvhEei6wanWUMkAgg" name="lastUIDnumber" visibility="private" isStatic="true" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_iOJ_MEvhEei6wanWUMkAgg" name="defaultValue">
+              <language>JAVA</language>
+              <body>0</body>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOLNUEvhEei6wanWUMkAgg" name="UID" visibility="private" type="_EFLzEC0tEeiIwdMmK2XONw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOMbcEvhEei6wanWUMkAgg" name="isAssignedtoPk" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOOQoEvhEei6wanWUMkAgg" name="isAssignedtoRb" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOPewEvhEei6wanWUMkAgg" name="packingTicks" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOQs4EvhEei6wanWUMkAgg" name="shelfs" visibility="private" type="_EGKqgC0tEeiIwdMmK2XONw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOR7AEvhEei6wanWUMkAgg" name="orderPicked" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOTJIEvhEei6wanWUMkAgg" name="recivedbyPkStation" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOUXQEvhEei6wanWUMkAgg" name="Dispatched" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOVlYEvhEei6wanWUMkAgg" name="totalticks" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iOYBoEvhEei6wanWUMkAgg" name="PackingStationUID" visibility="private" type="_EFLzEC0tEeiIwdMmK2XONw" isUnique="false"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iOeIQEvhEei6wanWUMkAgg" name="Order" specification="_iOZPwEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    lastUIDnumber += 1;&#xD;
+    this.UID = &quot;o&quot; + lastUIDnumber;&#xD;
+    packingTicks = pkingticks;&#xD;
+    totalticks = 0;&#xD;
+    isAssignedtoPk = false;&#xD;
+    isAssignedtoRb = false;&#xD;
+    orderPicked = false;&#xD;
+    recivedbyPkStation = false;&#xD;
+    Dispatched = false;&#xD;
+    this.shelfs = shelfsvalue;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iOgkgEvhEei6wanWUMkAgg" name="isorderassignedtorb" specification="_iOevUEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return isAssignedtoRb;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iOiZsEvhEei6wanWUMkAgg" name="assigneordertorb" specification="_iOhyoEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    isAssignedtoRb = true;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iOldAEvhEei6wanWUMkAgg" name="isAssignedtoPk" specification="_iOjn0EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return isAssignedtoPk;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iOn5QEvhEei6wanWUMkAgg" name="isorderDispatched" specification="_iOmrIEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return Dispatched;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iOpucEvhEei6wanWUMkAgg" name="Dispatched" specification="_iOpHYEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Dispatched = true;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iOsxwEvhEei6wanWUMkAgg" name="checkiforderrecivedbypk" specification="_iOrjoEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return recivedbyPkStation;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iOv1EEvhEei6wanWUMkAgg" name="getUid" specification="_iOt_4EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return UID;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iOy4YEvhEei6wanWUMkAgg" name="getPackingTicks" specification="_iOxDMEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return packingTicks;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iO0tkEvhEei6wanWUMkAgg" name="decreasePKticks" specification="_iO0GgEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    if (packingTicks > 0) {&#xD;
+        packingTicks -= 1;&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iO2iwEvhEei6wanWUMkAgg" name="incrementTotalTicks" specification="_iO17sEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    if (Dispatched != true &amp;&amp; isAssignedtoPk) {&#xD;
+        totalticks++;&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iO6NIEvhEei6wanWUMkAgg" name="GetTotalTicks" specification="_iO4X8EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return totalticks;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iO_FoEvhEei6wanWUMkAgg" name="getshelfnotcollected" specification="_iO8CUEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Item>> entries = shelfs.entrySet().iterator();&#xD;
+    while (entries.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Item> entry = entries.next();&#xD;
+        if (entry.getValue().hasshelfbeencollected() == false) {&#xD;
+            return entry.getValue();&#xD;
+        }&#xD;
+    }&#xD;
+    orderPicked = true;&#xD;
+    return null;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iPDXEEvhEei6wanWUMkAgg" name="checkifallitemsdeliveredtopk" specification="_iPA60EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Item>> entries = shelfs.entrySet().iterator();&#xD;
+    while (entries.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Item> entry = entries.next();&#xD;
+        if (entry.getValue().hasitembeenrecivedbypk() == false) {&#xD;
+            return false;&#xD;
+        }&#xD;
+    }&#xD;
+    recivedbyPkStation = true;&#xD;
+    return true;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iPGaYEvhEei6wanWUMkAgg" name="checkifallitemspicked" specification="_iPElMEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Item>> entries = shelfs.entrySet().iterator();&#xD;
+    while (entries.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Item> entry = entries.next();&#xD;
+        if (entry.getValue().hasshelfbeencollected() == false) {&#xD;
+            return false;&#xD;
+        }&#xD;
+    }&#xD;
+    return true;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iPL58EvhEei6wanWUMkAgg" name="checkIfashelfpicked" specification="_iPIPkEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return shelfs.get(ssuid).hasshelfbeencollected();&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iPQLYEvhEei6wanWUMkAgg" name="shelfExists" specification="_iPNIEEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    if (!shelfs.containsKey(uid)) {&#xD;
+        return false;&#xD;
+    } else {&#xD;
+        return true;&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iPUc0EvhEei6wanWUMkAgg" name="getOrderPicked" specification="_iPSAkEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return orderPicked;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iPXgIEvhEei6wanWUMkAgg" name="assignOrdertopkstation" specification="_iPVq8EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    PackingStationUID = UID;&#xD;
+    isAssignedtoPk = true;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iPajcEvhEei6wanWUMkAgg" name="getPkingStationUid" specification="_iPYuQEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return PackingStationUID;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iPdmwEvhEei6wanWUMkAgg" name="getallshelfsnotpicked" specification="_iPbxkEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    HashMap&lt;String, Boolean> shelfsonly = new HashMap&lt;String, Boolean>();&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Item>> entries = shelfs.entrySet().iterator();&#xD;
+    while (entries.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Item> entry = entries.next();&#xD;
+        if (entry.getValue().hasshelfbeencollected() == false) {&#xD;
+            shelfsonly.put(entry.getKey(), false);&#xD;
+        }&#xD;
+    }&#xD;
+    return shelfsonly;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iPh4MEvhEei6wanWUMkAgg" name="toString" specification="_iPfb8EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    String orderproperty = &quot;[&quot; + UID + &quot;   &quot; + packingTicks;&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Item>> entries = shelfs.entrySet().iterator();&#xD;
+    while (entries.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Item> entry = entries.next();&#xD;
+        orderproperty += &quot;  &quot; + entry.getKey();&#xD;
+    }&#xD;
+    if (Dispatched) {&#xD;
+        orderproperty += &quot;  dispatched&quot;;&#xD;
+    } else if (recivedbyPkStation) {&#xD;
+        orderproperty += &quot;  recived by pks&quot;;&#xD;
+    } else if (isAssignedtoRb) {&#xD;
+        orderproperty += &quot;  isAssignedtoRb=&quot; + isAssignedtoRb;&#xD;
+    } else if (isAssignedtoPk) {&#xD;
+        orderproperty += &quot;  pkUid&quot; + PackingStationUID;&#xD;
+    }&#xD;
+    return orderproperty;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iOZPwEvhEei6wanWUMkAgg" name="Order" visibility="public" method="_iOeIQEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOcTEEvhEei6wanWUMkAgg" name="pkingticks">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOc6IEvhEei6wanWUMkAgg" name="shelfsvalue" type="_EGKqgC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iOevUEvhEei6wanWUMkAgg" name="isorderassignedtorb" visibility="public" method="_iOgkgEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOfWYEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iOhyoEvhEei6wanWUMkAgg" name="assigneordertorb" visibility="public" method="_iOiZsEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iOjn0EvhEei6wanWUMkAgg" name="isAssignedtoPk" visibility="public" method="_iOldAEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOkO4EvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iOmrIEvhEei6wanWUMkAgg" name="isorderDispatched" visibility="public" method="_iOn5QEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOnSMEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iOpHYEvhEei6wanWUMkAgg" name="Dispatched" visibility="public" method="_iOpucEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iOrjoEvhEei6wanWUMkAgg" name="checkiforderrecivedbypk" visibility="public" method="_iOsxwEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOsKsEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iOt_4EvhEei6wanWUMkAgg" name="getUid" visibility="public" method="_iOv1EEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOvOAEvhEei6wanWUMkAgg" type="_EFLzEC0tEeiIwdMmK2XONw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iOxDMEvhEei6wanWUMkAgg" name="getPackingTicks" visibility="public" method="_iOy4YEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOyRUEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iO0GgEvhEei6wanWUMkAgg" name="decreasePKticks" visibility="public" method="_iO0tkEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iO17sEvhEei6wanWUMkAgg" name="incrementTotalTicks" visibility="public" method="_iO2iwEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iO4X8EvhEei6wanWUMkAgg" name="GetTotalTicks" visibility="public" method="_iO6NIEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iO5mEEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iO8CUEvhEei6wanWUMkAgg" name="getshelfnotcollected" visibility="public" method="_iO_FoEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iO93gEvhEei6wanWUMkAgg" type="_l0v6IEvbEei6wanWUMkAgg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iPA60EvhEei6wanWUMkAgg" name="checkifallitemsdeliveredtopk" visibility="public" method="_iPDXEEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPCI8EvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iPElMEvhEei6wanWUMkAgg" name="checkifallitemspicked" visibility="public" method="_iPGaYEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPFMQEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iPIPkEvhEei6wanWUMkAgg" name="checkIfashelfpicked" visibility="public" method="_iPL58EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPJdsEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPKr0EvhEei6wanWUMkAgg" name="ssuid" type="_EFLzEC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iPNIEEvhEei6wanWUMkAgg" name="shelfExists" visibility="public" method="_iPQLYEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPOWMEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPPkUEvhEei6wanWUMkAgg" name="uid" type="_EFLzEC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iPSAkEvhEei6wanWUMkAgg" name="getOrderPicked" visibility="public" method="_iPUc0EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPSnoEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iPVq8EvhEei6wanWUMkAgg" name="assignOrdertopkstation" visibility="public" method="_iPXgIEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPW5EEvhEei6wanWUMkAgg" name="UID" type="_EFLzEC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iPYuQEvhEei6wanWUMkAgg" name="getPkingStationUid" visibility="public" method="_iPajcEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPZ8YEvhEei6wanWUMkAgg" type="_EFLzEC0tEeiIwdMmK2XONw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iPbxkEvhEei6wanWUMkAgg" name="getallshelfsnotpicked" visibility="public" method="_iPdmwEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPc_sEvhEei6wanWUMkAgg" type="_EGKqgC0tEeiIwdMmK2XONw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iPfb8EvhEei6wanWUMkAgg" name="toString" visibility="public" method="_iPh4MEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPhRIEvhEei6wanWUMkAgg" type="_EFLzEC0tEeiIwdMmK2XONw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_iP65wEvhEei6wanWUMkAgg" name="Simulator" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iP9WAEvhEei6wanWUMkAgg" name="warehouse" visibility="private" type="_iP8u8EvhEei6wanWUMkAgg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iQAZUEvhEei6wanWUMkAgg" name="stats" visibility="private" type="_iP_LMEvhEei6wanWUMkAgg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iQCOgEvhEei6wanWUMkAgg" name="rand" visibility="private" type="_S1Z6cC6_Eei7v_wvYgzRhg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iQEDsEvhEei6wanWUMkAgg" name="Orders" visibility="private" type="_EGKqgC0tEeiIwdMmK2XONw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iQF44EvhEei6wanWUMkAgg" name="actors" visibility="private" type="_EGKqgC0tEeiIwdMmK2XONw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y1dTMkviEei6wanWUMkAgg" name="warehousestats" type="_iP_LMEvhEei6wanWUMkAgg" association="_y1cFEEviEei6wanWUMkAgg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_y1dTM0viEei6wanWUMkAgg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_y1dTNEviEei6wanWUMkAgg" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_fFM_UkvjEei6wanWUMkAgg" name="order" type="_iOHi8EvhEei6wanWUMkAgg" aggregation="composite" association="_fFMYQEvjEei6wanWUMkAgg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fFM_U0vjEei6wanWUMkAgg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fFM_VEvjEei6wanWUMkAgg" value="1"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQN0sEvhEei6wanWUMkAgg" name="Simulator" specification="_iQKKUEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    warehouse = new Warehouse(5, 5);&#xD;
+    rand = new Random();&#xD;
+    Orders = new HashMap&lt;String, Order>();&#xD;
+    stats = new WarehouseStats();&#xD;
+    actors = warehouse.getWarehouseGrid();&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQSGIEvhEei6wanWUMkAgg" name="getWarehouse" specification="_iQQQ8EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return warehouse;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQVwgEvhEei6wanWUMkAgg" name="genRandomOrders" specification="_iQT7UEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    int NumberOfStrgeShelfs = 0;&#xD;
+    int NumbOfOrders = rand.nextInt(100) + 1;&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Actor>> entries = warehouse.getWarehouseGrid().entrySet().iterator();&#xD;
+    while (entries.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Actor> entry = entries.next();&#xD;
+        if (entry.getValue() instanceof storageShelf) {&#xD;
+            NumberOfStrgeShelfs += 1;&#xD;
+        }&#xD;
+    }&#xD;
+    for (int i = 0; i &lt; NumbOfOrders; i++) {&#xD;
+        int numberofShelfs = rand.nextInt(NumberOfStrgeShelfs) + 1;&#xD;
+        HashMap&lt;String, Item> shelfUids = new HashMap&lt;String, Item>();&#xD;
+        for (int b = 0; b &lt; numberofShelfs; b++) {&#xD;
+            int rndmshelf = rand.nextInt(NumberOfStrgeShelfs);&#xD;
+            boolean set = false;&#xD;
+            while (!set) {&#xD;
+                if (shelfUids.containsKey(&quot;ss&quot; + rndmshelf) == false &amp;&amp; actors.containsKey(&quot;ss&quot; + rndmshelf)) {&#xD;
+                    Item newitem = new Item(&quot;ss&quot; + rndmshelf);&#xD;
+                    shelfUids.put(newitem.getshelfUid(), newitem);&#xD;
+                    set = true;&#xD;
+                } else {&#xD;
+                    rndmshelf = rand.nextInt(NumberOfStrgeShelfs);&#xD;
+                }&#xD;
+            }&#xD;
+        }&#xD;
+        Order order = new Order(rand.nextInt(15) + 1, shelfUids);&#xD;
+        Orders.put(order.getUid(), order);&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQYMwEvhEei6wanWUMkAgg" name="simulateOneTick" specification="_iQW-oEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    stats.checkifsimisover(warehouse.getWarehouseGrid(), Orders);&#xD;
+    if (stats.isSimulationover() == false) {&#xD;
+        Iterator&lt;HashMap.Entry&lt;String, Actor>> actorsit = actors.entrySet().iterator();&#xD;
+        while (actorsit.hasNext()) {&#xD;
+            HashMap.Entry&lt;String, Actor> entry = actorsit.next();&#xD;
+            if (entry.getValue() instanceof packingStation) {&#xD;
+                packingStation packingstation = (packingStation) actors.get(entry.getKey());&#xD;
+                packingstation.tick(actors, Orders);&#xD;
+            }&#xD;
+        }&#xD;
+        actorsit = actors.entrySet().iterator();&#xD;
+        while (actorsit.hasNext()) {&#xD;
+            HashMap.Entry&lt;String, Actor> entry = actorsit.next();&#xD;
+            if (entry.getValue() instanceof ChargingPod) {&#xD;
+                ChargingPod cpod = (ChargingPod) actors.get(entry.getKey());&#xD;
+                cpod.tick(actors, Orders);&#xD;
+            }&#xD;
+        }&#xD;
+        actorsit = actors.entrySet().iterator();&#xD;
+        while (actorsit.hasNext()) {&#xD;
+            HashMap.Entry&lt;String, Actor> entry = actorsit.next();&#xD;
+            if (entry.getValue() instanceof Robot) {&#xD;
+                Robot robot = (Robot) actors.get(entry.getKey());&#xD;
+                robot.tick(actors, Orders);&#xD;
+            }&#xD;
+        }&#xD;
+        stats.incrementticks();&#xD;
+    } else {&#xD;
+        if (stats.getcrash()) {&#xD;
+            JOptionPane.showMessageDialog(null, &quot;robotcrashed&quot;, &quot;error&quot;, JOptionPane.INFORMATION_MESSAGE);&#xD;
+        } else if (stats.getordercomplete()) {&#xD;
+            JOptionPane.showMessageDialog(null, &quot;ordercomplete&quot;, &quot;succsess&quot;, JOptionPane.INFORMATION_MESSAGE);&#xD;
+        } else if (stats.getbatterydeadvalue()) {&#xD;
+            JOptionPane.showMessageDialog(null, &quot;baterrydead&quot;, &quot;error&quot;, JOptionPane.INFORMATION_MESSAGE);&#xD;
+        }&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQceMEvhEei6wanWUMkAgg" name="simulateNTicks" specification="_iQaB8EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    for (int i = 0; i &lt; n; i++) {&#xD;
+        simulateOneTick();&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQe6cEvhEei6wanWUMkAgg" name="simulatetillend" specification="_iQdsUEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    while (stats.isSimulationover() == false) {&#xD;
+        simulateOneTick();&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQhWsEvhEei6wanWUMkAgg" name="resetorders" specification="_iQgIkEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Orders.clear();&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQqgoEvhEei6wanWUMkAgg" name="getordersList" specification="_iQik0EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    ObservableList&lt;String> orderslist = FXCollections.observableArrayList();&#xD;
+    Iterator&lt;Entry&lt;String, Order>> actorsit = Orders.entrySet().iterator();&#xD;
+    while (actorsit.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Order> entry = actorsit.next();&#xD;
+        orderslist.add(entry.getValue().toString());&#xD;
+    }&#xD;
+    return orderslist;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQtj8EvhEei6wanWUMkAgg" name="getactorslist" specification="_iQruwEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    ObservableList&lt;String> actorslist = FXCollections.observableArrayList();&#xD;
+    Iterator&lt;Entry&lt;String, Actor>> actorsit = actors.entrySet().iterator();&#xD;
+    while (actorsit.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Actor> entry = actorsit.next();&#xD;
+        actorslist.add(entry.getValue().toString());&#xD;
+    }&#xD;
+    return actorslist;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iQwnQEvhEei6wanWUMkAgg" name="getnumberofticks" specification="_iQuyEEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return stats.getTotalnumofticks();&#xD;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQKKUEvhEei6wanWUMkAgg" name="Simulator" visibility="public" method="_iQN0sEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQQQ8EvhEei6wanWUMkAgg" name="getWarehouse" visibility="public" method="_iQSGIEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQQ4AEvhEei6wanWUMkAgg" type="_iP8u8EvhEei6wanWUMkAgg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQT7UEvhEei6wanWUMkAgg" name="genRandomOrders" visibility="public" method="_iQVwgEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQW-oEvhEei6wanWUMkAgg" name="simulateOneTick" visibility="public" method="_iQYMwEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQaB8EvhEei6wanWUMkAgg" name="simulateNTicks" visibility="public" method="_iQceMEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQbQEEvhEei6wanWUMkAgg" name="n">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQdsUEvhEei6wanWUMkAgg" name="simulatetillend" visibility="public" method="_iQe6cEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQgIkEvhEei6wanWUMkAgg" name="resetorders" visibility="public" method="_iQhWsEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQik0EvhEei6wanWUMkAgg" name="getordersList" visibility="public" method="_iQqgoEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQpSgEvhEei6wanWUMkAgg" type="_iQm2QEvhEei6wanWUMkAgg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQruwEvhEei6wanWUMkAgg" name="getactorslist" visibility="public" method="_iQtj8EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQsV0EvhEei6wanWUMkAgg" type="_iQm2QEvhEei6wanWUMkAgg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iQuyEEvhEei6wanWUMkAgg" name="getnumberofticks" visibility="public" method="_iQwnQEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQvZIEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_iP8u8EvhEei6wanWUMkAgg" name="Warehouse" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iQ4jEEvhEei6wanWUMkAgg" name="warehouseActors" visibility="private" type="_EGKqgC0tEeiIwdMmK2XONw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iQ9bkEvhEei6wanWUMkAgg" name="row" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iRBF8EvhEei6wanWUMkAgg" name="columns" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iRC7IEvhEei6wanWUMkAgg" name="numbofrbandchargingstations" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iREJQEvhEei6wanWUMkAgg" name="numbofpackingstations" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iRF-cEvhEei6wanWUMkAgg" name="numbofshelfs" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_n9Js4UviEei6wanWUMkAgg" name="actor" type="_iMsmoEvhEei6wanWUMkAgg" aggregation="composite" association="_n9JF0EviEei6wanWUMkAgg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n9Js4kviEei6wanWUMkAgg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n9Js40viEei6wanWUMkAgg" value="1"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRPIYEvhEei6wanWUMkAgg" name="Warehouse" specification="_iRHzoEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    this.row = row;&#xD;
+    this.columns = column;&#xD;
+    Robot.maxrow = getrows() - 1;&#xD;
+    Robot.maxcol = getcolumns() - 1;&#xD;
+    warehouseActors = new HashMap&lt;String, Actor>();&#xD;
+    numbofrbandchargingstations = 0;&#xD;
+    numbofpackingstations = 0;&#xD;
+    numbofshelfs = 0;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRSLsEvhEei6wanWUMkAgg" name="getrows" specification="_iRQ9kEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return row;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRUn8EvhEei6wanWUMkAgg" name="minrequirmentsofgrid" specification="_iRTZ0EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    if (numbofrbandchargingstations > 0 &amp;&amp; numbofpackingstations > 0 &amp;&amp; numbofshelfs > 0) {&#xD;
+        return true;&#xD;
+    }&#xD;
+    return false;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRXEMEvhEei6wanWUMkAgg" name="resetwarehouse" specification="_iRV2EEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    warehouseActors = new HashMap&lt;String, Actor>();&#xD;
+    numbofrbandchargingstations = 0;&#xD;
+    numbofpackingstations = 0;&#xD;
+    numbofshelfs = 0;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRaHgEvhEei6wanWUMkAgg" name="getcolumns" specification="_iRY5YEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return columns;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iReY8EvhEei6wanWUMkAgg" name="setcolumnandrows" specification="_iRbVoEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    this.row = row;&#xD;
+    this.columns = column;&#xD;
+    Robot.maxrow = getrows() - 1;&#xD;
+    Robot.maxcol = getcolumns() - 1;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRhcQEvhEei6wanWUMkAgg" name="addActor" specification="_iRfnEEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    warehouseActors.put(actor.getUID(), actor);&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRlGoEvhEei6wanWUMkAgg" name="addRbAndChrgingPad" specification="_iRjRcEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Robot robot = new Robot(numbofrbandchargingstations, row, col);&#xD;
+    addActor(robot);&#xD;
+    ChargingPod cpod = new ChargingPod(numbofrbandchargingstations, row, col);&#xD;
+    addActor(cpod);&#xD;
+    numbofrbandchargingstations = numbofrbandchargingstations + 1;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRp_IEvhEei6wanWUMkAgg" name="addpackingStation" specification="_iRm70EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    packingStation packstation = new packingStation(numbofpackingstations, row, col);&#xD;
+    addActor(packstation);&#xD;
+    numbofpackingstations = numbofpackingstations + 1;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRuQkEvhEei6wanWUMkAgg" name="addStorageshelf" specification="_iRr0UEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    storageShelf sshelf = new storageShelf(numbofshelfs, row, col);&#xD;
+    addActor(sshelf);&#xD;
+    numbofshelfs = numbofshelfs + 1;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iRx68EvhEei6wanWUMkAgg" name="getWarehouseGrid" specification="_iRwFwEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return warehouseActors;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iR2MYEvhEei6wanWUMkAgg" name="doesEntityExist" specification="_iRyiAEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    boolean entityAlreadyExists = false;&#xD;
+    Location l = new Location(rowIndex, colindex);&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Actor>> actors1 = warehouseActors.entrySet().iterator();&#xD;
+    while (actors1.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Actor> entry = actors1.next();&#xD;
+        if (entry.getValue().getLocation().equals(l)) {&#xD;
+            entityAlreadyExists = true;&#xD;
+        }&#xD;
+    }&#xD;
+    return entityAlreadyExists;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iR52wEvhEei6wanWUMkAgg" name="removeEntity" specification="_iR4BkEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Location l = new Location(rowIndex, colindex);&#xD;
+    boolean removerobot = false;&#xD;
+    String rbUid = &quot;&quot;, chargUid = &quot;&quot;;&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Actor>> actors = warehouseActors.entrySet().iterator();&#xD;
+    while (actors.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Actor> entry = actors.next();&#xD;
+        if (entry.getValue().getLocation().equals(l)) {&#xD;
+            if (entry.getValue() instanceof Robot) {&#xD;
+                removerobot = true;&#xD;
+                rbUid = entry.getKey();&#xD;
+            } else if (entry.getValue() instanceof ChargingPod) {&#xD;
+                removerobot = true;&#xD;
+                chargUid = entry.getKey();&#xD;
+            } else if (entry.getValue() instanceof packingStation) {&#xD;
+                numbofpackingstations -= 1;&#xD;
+                actors.remove();&#xD;
+            } else if (entry.getValue() instanceof storageShelf) {&#xD;
+                numbofshelfs -= 1;&#xD;
+                actors.remove();&#xD;
+            }&#xD;
+        }&#xD;
+    }&#xD;
+    if (removerobot) {&#xD;
+        warehouseActors.remove(rbUid);&#xD;
+        warehouseActors.remove(chargUid);&#xD;
+        numbofrbandchargingstations -= 1;&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRHzoEvhEei6wanWUMkAgg" name="Warehouse" visibility="public" method="_iRPIYEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRNTMEvhEei6wanWUMkAgg" name="row">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iROhUEvhEei6wanWUMkAgg" name="column">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRQ9kEvhEei6wanWUMkAgg" name="getrows" visibility="public" method="_iRSLsEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRRkoEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRTZ0EvhEei6wanWUMkAgg" name="minrequirmentsofgrid" visibility="public" method="_iRUn8EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRUA4EvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRV2EEvhEei6wanWUMkAgg" name="resetwarehouse" visibility="public" method="_iRXEMEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRY5YEvhEei6wanWUMkAgg" name="getcolumns" visibility="public" method="_iRaHgEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRZgcEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRbVoEvhEei6wanWUMkAgg" name="setcolumnandrows" visibility="public" method="_iReY8EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRcjwEvhEei6wanWUMkAgg" name="row">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRdK0EvhEei6wanWUMkAgg" name="column">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRfnEEvhEei6wanWUMkAgg" name="addActor" visibility="private" method="_iRhcQEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRg1MEvhEei6wanWUMkAgg" name="actor" type="_iMsmoEvhEei6wanWUMkAgg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRjRcEvhEei6wanWUMkAgg" name="addRbAndChrgingPad" visibility="public" method="_iRlGoEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRj4gEvhEei6wanWUMkAgg" name="row">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRkfkEvhEei6wanWUMkAgg" name="col">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRm70EvhEei6wanWUMkAgg" name="addpackingStation" visibility="public" method="_iRp_IEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRoJ8EvhEei6wanWUMkAgg" name="row">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRpYEEvhEei6wanWUMkAgg" name="col">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRr0UEvhEei6wanWUMkAgg" name="addStorageshelf" visibility="public" method="_iRuQkEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRsbYEvhEei6wanWUMkAgg" name="row">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRtCcEvhEei6wanWUMkAgg" name="col">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRwFwEvhEei6wanWUMkAgg" name="getWarehouseGrid" visibility="public" method="_iRx68EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRxT4EvhEei6wanWUMkAgg" type="_EGKqgC0tEeiIwdMmK2XONw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iRyiAEvhEei6wanWUMkAgg" name="doesEntityExist" visibility="public" method="_iR2MYEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iRzJEEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iR0XMEvhEei6wanWUMkAgg" name="colindex">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iR1lUEvhEei6wanWUMkAgg" name="rowIndex">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iR4BkEvhEei6wanWUMkAgg" name="removeEntity" visibility="public" method="_iR52wEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iR4ooEvhEei6wanWUMkAgg" name="colindex">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iR5PsEvhEei6wanWUMkAgg" name="rowIndex">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_iP_LMEvhEei6wanWUMkAgg" name="WarehouseStats" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iR_WUEvhEei6wanWUMkAgg" name="totalnumofticks" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iSBLgEvhEei6wanWUMkAgg" name="orderComplete" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iSK8gEvhEei6wanWUMkAgg" name="crash" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iSMKoEvhEei6wanWUMkAgg" name="simulationover" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iSNYwEvhEei6wanWUMkAgg" name="deadbattery" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iSSRQEvhEei6wanWUMkAgg" name="WarehouseStats" specification="_iSPN8EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    totalnumofticks = 0;&#xD;
+    orderComplete = false;&#xD;
+    crash = false;&#xD;
+    simulationover = false;&#xD;
+    deadbattery = false;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iSUtgEvhEei6wanWUMkAgg" name="incrementticks" specification="_iSUGcEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    totalnumofticks += 1;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iSY-8EvhEei6wanWUMkAgg" name="getordercomplete" specification="_iSXJwEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return orderComplete;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iSd3cEvhEei6wanWUMkAgg" name="checkOrdercomplete" specification="_iSa0IEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    int numberoforderscomplete = 0;&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Order>> entries = Orders.entrySet().iterator();&#xD;
+    while (entries.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Order> entry = entries.next();&#xD;
+        if (entry.getValue().isorderDispatched()) {&#xD;
+            numberoforderscomplete += 1;&#xD;
+        }&#xD;
+    }&#xD;
+    if (numberoforderscomplete == Orders.size()) {&#xD;
+        orderComplete = true;&#xD;
+        simulationover = true;&#xD;
+    } else {&#xD;
+        orderComplete = false;&#xD;
+    }&#xD;
+    return orderComplete;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iSiI4EvhEei6wanWUMkAgg" name="checkifrbcrash" specification="_iSgTsEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    int i = 0;&#xD;
+    while (warehouseActors.containsKey(&quot;r&quot; + i)) {&#xD;
+        Robot r = (Robot) warehouseActors.get(&quot;r&quot; + i);&#xD;
+        if (r.getcrashval()) {&#xD;
+            crash = true;&#xD;
+            simulationover = true;&#xD;
+        }&#xD;
+        i += 1;&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iSlzQEvhEei6wanWUMkAgg" name="checkifbatteryisdead" specification="_iSj-EEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Iterator&lt;HashMap.Entry&lt;String, Actor>> actors = warehouseActors.entrySet().iterator();&#xD;
+    while (actors.hasNext()) {&#xD;
+        HashMap.Entry&lt;String, Actor> entry = actors.next();&#xD;
+        if (entry.getValue() instanceof Robot) {&#xD;
+            Robot r = (Robot) entry.getValue();&#xD;
+            deadbattery = r.checkifbatteryisdead();&#xD;
+            if (deadbattery == true) {&#xD;
+                simulationover = true;&#xD;
+            }&#xD;
+        }&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iSzOoEvhEei6wanWUMkAgg" name="getbatterydeadvalue" specification="_iSnocEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return deadbattery;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iS25AEvhEei6wanWUMkAgg" name="checkifsimisover" specification="_iS1D0EvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    checkifrbcrash(warehouseActors);&#xD;
+    checkOrdercomplete(orders);&#xD;
+    checkifbatteryisdead(warehouseActors);&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iS4uMEvhEei6wanWUMkAgg" name="getcrash" specification="_iS3gEEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return crash;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iS7KcEvhEei6wanWUMkAgg" name="getTotalnumofticks" specification="_iS58UEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return totalnumofticks;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iS_b4EvhEei6wanWUMkAgg" name="isSimulationover" specification="_iS7xgEvhEei6wanWUMkAgg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return simulationover;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iSPN8EvhEei6wanWUMkAgg" name="WarehouseStats" visibility="public" method="_iSSRQEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iSUGcEvhEei6wanWUMkAgg" name="incrementticks" visibility="public" method="_iSUtgEvhEei6wanWUMkAgg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iSXJwEvhEei6wanWUMkAgg" name="getordercomplete" visibility="public" method="_iSY-8EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iSYX4EvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iSa0IEvhEei6wanWUMkAgg" name="checkOrdercomplete" visibility="private" method="_iSd3cEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iSbbMEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iScpUEvhEei6wanWUMkAgg" name="Orders" type="_EGKqgC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iSgTsEvhEei6wanWUMkAgg" name="checkifrbcrash" visibility="private" method="_iSiI4EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iShh0EvhEei6wanWUMkAgg" name="warehouseActors" type="_EGKqgC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iSj-EEvhEei6wanWUMkAgg" name="checkifbatteryisdead" visibility="public" method="_iSlzQEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iSlMMEvhEei6wanWUMkAgg" name="warehouseActors" type="_EGKqgC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iSnocEvhEei6wanWUMkAgg" name="getbatterydeadvalue" visibility="public" method="_iSzOoEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iSyAgEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iS1D0EvhEei6wanWUMkAgg" name="checkifsimisover" visibility="public" method="_iS25AEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iS1D0UvhEei6wanWUMkAgg" name="warehouseActors" type="_EGKqgC0tEeiIwdMmK2XONw"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iS2R8EvhEei6wanWUMkAgg" name="orders" type="_EGKqgC0tEeiIwdMmK2XONw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iS3gEEvhEei6wanWUMkAgg" name="getcrash" visibility="public" method="_iS4uMEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iS4HIEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iS58UEvhEei6wanWUMkAgg" name="getTotalnumofticks" visibility="public" method="_iS7KcEvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iS6jYEvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_iS7xgEvhEei6wanWUMkAgg" name="isSimulationover" visibility="public" method="_iS_b4EvhEei6wanWUMkAgg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iS-00EvhEei6wanWUMkAgg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_iQjy8EvhEei6wanWUMkAgg" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_iQlBEEvhEei6wanWUMkAgg" name="javafx">
+        <packagedElement xmi:type="uml:Package" xmi:id="_iQmPMEvhEei6wanWUMkAgg" name="collections">
+          <packagedElement xmi:type="uml:Class" xmi:id="_iQm2QEvhEei6wanWUMkAgg" name="ObservableList"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_lumKoEviEei6wanWUMkAgg" memberEnd="_lumKo0viEei6wanWUMkAgg _lumxskviEei6wanWUMkAgg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lumKoUviEei6wanWUMkAgg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lumKokviEei6wanWUMkAgg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_lumxskviEei6wanWUMkAgg" name="actor" type="_iMsmoEvhEei6wanWUMkAgg" association="_lumKoEviEei6wanWUMkAgg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_n9JF0EviEei6wanWUMkAgg" memberEnd="_n9Js4UviEei6wanWUMkAgg _n9Js5EviEei6wanWUMkAgg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n9JF0UviEei6wanWUMkAgg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n9Js4EviEei6wanWUMkAgg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_n9Js5EviEei6wanWUMkAgg" name="warehouse" type="_iP8u8EvhEei6wanWUMkAgg" association="_n9JF0EviEei6wanWUMkAgg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_tuojUEviEei6wanWUMkAgg" memberEnd="_tupKYkviEei6wanWUMkAgg _tupKY0viEei6wanWUMkAgg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tupKYEviEei6wanWUMkAgg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tupKYUviEei6wanWUMkAgg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_tupKYkviEei6wanWUMkAgg" name="warehouse" type="_iP8u8EvhEei6wanWUMkAgg" association="_tuojUEviEei6wanWUMkAgg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_tupKY0viEei6wanWUMkAgg" name="simulator" type="_iP65wEvhEei6wanWUMkAgg" association="_tuojUEviEei6wanWUMkAgg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_y1cFEEviEei6wanWUMkAgg" memberEnd="_y1dTMkviEei6wanWUMkAgg _y1dTNUviEei6wanWUMkAgg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y1dTMEviEei6wanWUMkAgg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y1dTMUviEei6wanWUMkAgg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_y1dTNUviEei6wanWUMkAgg" name="simulator" type="_iP65wEvhEei6wanWUMkAgg" association="_y1cFEEviEei6wanWUMkAgg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_fFMYQEvjEei6wanWUMkAgg" memberEnd="_fFM_UkvjEei6wanWUMkAgg _fFM_VUvjEei6wanWUMkAgg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fFM_UEvjEei6wanWUMkAgg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fFM_UUvjEei6wanWUMkAgg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_fFM_VUvjEei6wanWUMkAgg" name="simulator" type="_iP65wEvhEei6wanWUMkAgg" association="_fFMYQEvjEei6wanWUMkAgg"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_EE-XsC0tEeiIwdMmK2XONw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EE_l0C0tEeiIwdMmK2XONw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_EFAM4C0tEeiIwdMmK2XONw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EFBbAC0tEeiIwdMmK2XONw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_EFD3QC0tEeiIwdMmK2XONw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EFFFYC0tEeiIwdMmK2XONw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_EFPdcC0tEeiIwdMmK2XONw" name="java.lang.String" base_Classifier="_EFLzEC0tEeiIwdMmK2XONw"/>
+  <PapyrusJava:External xmi:id="_EGNt0C0tEeiIwdMmK2XONw" name="java.util.HashMap" base_Classifier="_EGKqgC0tEeiIwdMmK2XONw"/>
+  <PapyrusJava:External xmi:id="_EGqZwC0tEeiIwdMmK2XONw" name="java.lang.Object" base_Classifier="_EGnWcC0tEeiIwdMmK2XONw"/>
+  <PapyrusJava:External xmi:id="_S1cWsC6_Eei7v_wvYgzRhg" name="java.util.Random" base_Classifier="_S1Z6cC6_Eei7v_wvYgzRhg"/>
+  <PapyrusJava:External xmi:id="_ZopgIC7QEei7v_wvYgzRhg" name="Location" base_Classifier="_ZonD4C7QEei7v_wvYgzRhg"/>
+  <PapyrusJava:External xmi:id="_ZrKooC7QEei7v_wvYgzRhg" name="Actor" base_Classifier="_ZrJagC7QEei7v_wvYgzRhg"/>
+  <PapyrusJava:External xmi:id="_ZrNr8C7QEei7v_wvYgzRhg" name="Order" base_Classifier="_ZrMd0C7QEei7v_wvYgzRhg"/>
+  <PapyrusJava:External xmi:id="_plJOIEvREei6wanWUMkAgg" name="PathFindingStratergy"/>
+  <PapyrusJava:External xmi:id="_l00LkEvbEei6wanWUMkAgg" name="Item" base_Classifier="_l0v6IEvbEei6wanWUMkAgg"/>
+  <standard:Create xmi:id="_iM1JgEvhEei6wanWUMkAgg" base_BehavioralFeature="_iMzUUEvhEei6wanWUMkAgg"/>
+  <standard:Create xmi:id="_iNkwYEvhEei6wanWUMkAgg" base_BehavioralFeature="_iNiUIEvhEei6wanWUMkAgg"/>
+  <standard:Create xmi:id="_iObE8EvhEei6wanWUMkAgg" base_BehavioralFeature="_iOZPwEvhEei6wanWUMkAgg"/>
+  <standard:Create xmi:id="_iQMmkEvhEei6wanWUMkAgg" base_BehavioralFeature="_iQKKUEvhEei6wanWUMkAgg"/>
+  <PapyrusJava:External xmi:id="_iQorcEvhEei6wanWUMkAgg" name="javafx.collections.ObservableList" base_Classifier="_iQm2QEvhEei6wanWUMkAgg"/>
+  <standard:Create xmi:id="_iRK28EvhEei6wanWUMkAgg" base_BehavioralFeature="_iRHzoEvhEei6wanWUMkAgg"/>
+  <standard:Create xmi:id="_iSRDIEvhEei6wanWUMkAgg" base_BehavioralFeature="_iSPN8EvhEei6wanWUMkAgg"/>
+</xmi:XMI>
